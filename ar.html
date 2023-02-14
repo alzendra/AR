@@ -12,30 +12,20 @@ let isReaction = false;
 let distance = howmuch+1;
 
 //для хранения состояния видимости маркера с заданным номером
-let markerVisible = [ false, false, false, false, false, false, false, false, false, false ]; 
+let markerVisible = [ false ]; 
 
 //для хранения маркеров
-let M = [ null, null, null, null, null, null, null, null, null, null ]; 
+let M = [ null ]; 
 
-//для хранения накладывающихся на маркер объектов - плоскости
-let d = [ null, null, null, null, null, null, null, null, null, null ]; 
 
 //для хранения связанных с маркером объектов - видео
 let X = [
-  [null, null, null, null, null, null, null, null, null, null],
-  [null, null, null, null, null, null, null, null, null, null],
-  [null, null, null, null, null, null, null, null, null, null],
-  [null, null, null, null, null, null, null, null, null, null],
-  [null, null, null, null, null, null, null, null, null, null],
-  [null, null, null, null, null, null, null, null, null, null],
-  [null, null, null, null, null, null, null, null, null, null],
-  [null, null, null, null, null, null, null, null, null, null],
-  [null, null, null, null, null, null, null, null, null, null],
-  [null, null, null, null, null, null, null, null, null, null],
-] ;//[ false, false, false, false, false, false, false, false, false, false ]; 
+  [null],
+  
+] ;//[ false ]; 
 
 //для хранения координат центров маркеров
-let p = [ null, null, null, null, null, null, null, null, null, null ]; 
+let p = [ null ]; 
 
 AFRAME.registerComponent('registerevents', { 
   init: function () { 
@@ -79,13 +69,6 @@ AFRAME.registerComponent('run', {
 
   }, 
  
-  tick: function (time, deltaTime) { 
-    //маркеры с какими номерами видны
-    let visible = [] 
-    for (let i=0;i<10;i++)
-      if (markerVisible[i]==true)
-         visible.push(i)//добавить в массив номер маркер
-
    
 
     
